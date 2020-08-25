@@ -9,15 +9,3 @@ exports.getProfile = (username, password, cb) => {
 
   cb(new Error('Not implemented'));
 }
-
-exports.authorizeAsync = (username, password) => {
-  return new Promise((resolve, reject) => {
-    lib.authorize(username, password, (err, token) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(token);
-      }
-    })
-  })
-}
